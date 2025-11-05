@@ -1,8 +1,10 @@
 extends Control
 
+const LEVEL_SELECTER: String = "res://scenes/level_selecter.tscn"
+
 
 func _on_play_pressed() -> void:
-	print("Playing the game")
+	get_tree().call_deferred("change_scene_to_file", LEVEL_SELECTER)
 
 func _on_options_pressed() -> void:
 	print("Opened options")
