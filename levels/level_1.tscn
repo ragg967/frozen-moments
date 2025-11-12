@@ -1,8 +1,18 @@
-[gd_scene format=3 uid="uid://cexectpj5xs7u"]
+[gd_scene load_steps=2 format=3 uid="uid://cexectpj5xs7u"]
+
+[ext_resource type="PackedScene" uid="uid://c0ucd13i12vhg" path="res://scenes/camera.tscn" id="1_vn7o3"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Test"
+[node name="Table" type="Node2D" parent="."]
+
+[node name="Top" type="Polygon2D" parent="Table"]
+position = Vector2(320, 170)
+color = Color(0.6124966, 0.31340152, 9.62615e-08, 1)
+antialiased = true
+polygon = PackedVector2Array(-208.00002, -104, 207.99998, -104, 208.00002, 95.99999, -207.99998, 95.99999)
+uv = PackedVector2Array(8.000029, -7.9999943, 424.00003, -7.9999943, 424.00003, 104.00001, 8.000029, 104.00001)
+
+[node name="Photos" type="Node2D" parent="Table"]
+
+[node name="Camera2D" parent="." instance=ExtResource("1_vn7o3")]
